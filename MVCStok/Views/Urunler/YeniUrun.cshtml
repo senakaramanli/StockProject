@@ -1,0 +1,34 @@
+﻿@model MVCStok.Models.Entity.Urunler
+
+
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>URUN ADI</label>
+        <input type="text" class="form-control" name="URUNAD" required="" maxlength="10"/>
+    </div>
+    <div>
+        <label>URUN MARKASI</label>
+        <input type="text" class="form-control" name="MARKA" required="" />
+    </div>
+    <div>
+        <label>KATEGORI SECINIZ</label>
+        @Html.DropDownListFor(m=>m.Kategoriler.KATEGORIID, (List<SelectListItem>)ViewBag.dgr, new{@class="form-control"})
+    </div>
+    <div>
+        <label>URUN FIYATI</label>
+        <input type="text" class="form-control" name="FIYAT" required=""/>
+    </div>
+    <div>
+        <label>URUN STOK</label>
+        <input type="text" class="form-control" name="Stok" required=""/>
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Urun Ekle</button>
+
+    </div>
+</form>
