@@ -1,2 +1,2 @@
 # MVCStok
-#### This project design with a database first method.
+#### This project is designed with a database first method.
